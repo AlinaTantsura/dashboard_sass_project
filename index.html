@@ -8,95 +8,842 @@
   </head>
   <body class="page">
     <aside class="sidebar js-menu" id="sidebar-menu">
-    <nav class="menu">
-      <button class="menu-btn js-menu-close" type="button" aria-label="Close menu">
-        <svg class="menu-btn-icon" width="20" height="20">
-          <use href="./src/img/icons.svg#icon-x-close"></use>
-        </svg>
-      </button>
-      <a class="logo" href="./index.html">
-        <svg class="logo-icon" width="24" height="24">
-          <use href="./src/img/icons.svg#icon-logo"></use>
-        </svg>
-        Cat CRM
-      </a>
+      <nav class="menu">
+        <button
+          class="menu-btn js-menu-close"
+          type="button"
+          aria-label="Close menu"
+        >
+          <svg class="menu-btn-icon" width="20" height="20">
+            <use href="./src/img/icons.svg#icon-x-close"></use>
+          </svg>
+        </button>
+        <a class="logo" href="./index.html">
+          <svg class="logo-icon" width="24" height="24">
+            <use href="./src/img/icons.svg#icon-logo"></use>
+          </svg>
+          Cat CRM
+        </a>
 
-      <ul class="menu-list">
-        <li class="menu-item">
-          <a class="menu-link current" href="./index.html">
-            <svg class="menu-icon" width="20" height="20">
-              <use href="./src/img/icons.svg#menu-columns"></use>
-            </svg>
-            Overview
-          </a>
-        </li>
-        <li class="menu-item">
-          <a class="menu-link" href="">
-            <svg class="menu-icon" width="20" height="20">
-              <use href="./src/img/icons.svg#icon-bi_person-plus"></use>
-            </svg>
-            Contacts
-          </a>
-        </li>
-        <li class="menu-item">
-          <a class="menu-link" href="">
-            <svg class="menu-icon" width="20" height="20">
-              <use href="./src/img/icons.svg#icon-bi_briefcase"></use>
-            </svg>
-            Companies
-          </a>
-        </li>
-        <li class="menu-item">
-          <a class="menu-link" href="">
-            <svg class="menu-icon" width="20" height="20">
-              <use href="./src/img/icons.svg#icon-bi_coin"></use>
-            </svg>
-            Deals
-          </a>
-        </li>
-        <li class="menu-item">
-          <a class="menu-link" href="">
-            <svg class="menu-icon" width="20" height="20">
-              <use href="./src/img/icons.svg#icon-bi_clipboard-check"></use>
-            </svg>
-            Document
-          </a>
-        </li>
-        <li class="menu-item">
-          <a class="menu-link" href="">
-            <svg class="menu-icon" width="20" height="20">
-              <use href="./src/img/icons.svg#icon-bi_envelope"></use>
-            </svg>
-            Message
-          </a>
-        </li>
-        <li class="menu-item">
-          <a class="menu-link" href="">
-            <svg class="menu-icon" width="20" height="20">
-              <use href="./src/img/icons.svg#icon-bi_calendar4-range"></use>
-            </svg>
-            Calendar
-          </a>
-        </li>
-        <li class="menu-item">
-          <a class="menu-link" href="">
-            <svg class="menu-icon" width="20" height="20">
-              <use href="./src/img/icons.svg#icon-bi_journal-text"></use>
-            </svg>
-            Report
-          </a>
-        </li>
-      </ul>
-    </nav>
+        <ul class="menu-list">
+          <li class="menu-item">
+            <a class="menu-link current" href="./index.html">
+              <svg class="menu-icon" width="20" height="20">
+                <use href="./src/img/icons.svg#menu-columns"></use>
+              </svg>
+              Overview
+            </a>
+          </li>
+          <li class="menu-item">
+            <a class="menu-link" href="">
+              <svg class="menu-icon" width="20" height="20">
+                <use href="./src/img/icons.svg#icon-bi_person-plus"></use>
+              </svg>
+              Contacts
+            </a>
+          </li>
+          <li class="menu-item">
+            <a class="menu-link" href="">
+              <svg class="menu-icon" width="20" height="20">
+                <use href="./src/img/icons.svg#icon-bi_briefcase"></use>
+              </svg>
+              Companies
+            </a>
+          </li>
+          <li class="menu-item">
+            <a class="menu-link" href="">
+              <svg class="menu-icon" width="20" height="20">
+                <use href="./src/img/icons.svg#icon-bi_coin"></use>
+              </svg>
+              Deals
+            </a>
+          </li>
+          <li class="menu-item">
+            <a class="menu-link" href="">
+              <svg class="menu-icon" width="20" height="20">
+                <use href="./src/img/icons.svg#icon-bi_clipboard-check"></use>
+              </svg>
+              Document
+            </a>
+          </li>
+          <li class="menu-item">
+            <a class="menu-link" href="">
+              <svg class="menu-icon" width="20" height="20">
+                <use href="./src/img/icons.svg#icon-bi_envelope"></use>
+              </svg>
+              Message
+            </a>
+          </li>
+          <li class="menu-item">
+            <a class="menu-link" href="">
+              <svg class="menu-icon" width="20" height="20">
+                <use href="./src/img/icons.svg#icon-bi_calendar4-range"></use>
+              </svg>
+              Calendar
+            </a>
+          </li>
+          <li class="menu-item">
+            <a class="menu-link" href="">
+              <svg class="menu-icon" width="20" height="20">
+                <use href="./src/img/icons.svg#icon-bi_journal-text"></use>
+              </svg>
+              Report
+            </a>
+          </li>
+        </ul>
+      </nav>
     </aside>
 
-    <header class="header"></header>
+    <header class="header">
+      <button
+        class="menu-btn js-menu-open"
+        type="button"
+        aria-expanded="false"
+        aria-controls="sidebar-menu"
+      >
+        <svg class="menu-btn-icon" width="24" height="24">
+          <use href="./src/img/icons.svg#icon-bi_menu"></use>
+        </svg>
+        Overview
+      </button>
+      <label class="search-field">
+        <svg class="search-icon" width="20" height="20">
+          <use href="./src/img/icons.svg#icon-bi_search"></use>
+        </svg>
+        <input
+          class="search-input"
+          type="search"
+          name="user_search"
+          placeholder="Search..."
+        />
+      </label>
+      <svg class="search-icon" width="20" height="20">
+        <use href="./src/img/icons.svg#icon-bell"></use>
+      </svg>
+    </header>
     <main class="main">
-      <section class="welcome"></section>
-      <section class="co-workers"></section>
-      <section class="tasks"></section>
-      <section class="reports"></section>
+      <section class="welcome">
+        <h2>Hi, Alina <span>Welcome into Cat CRM Dashboard</span></h2>
+        <button type="button">
+          <svg class="search-icon" width="20" height="20">
+            <use href="./src/img/icons.svg#icon-bi_plus"></use>
+          </svg>
+          Primary normal
+        </button>
+      </section>
+      <section class="co-workers">
+        <div class="co-workers-wrapper">
+          <h2 class="co-workers-title">
+            <span>Co-workers</span>
+            Marketing department
+          </h2>
 
+          <div class="co-workers-container">
+            <details class="co-workers-details">
+              <summary class="co-workers-data">
+                <svg class="co-workers-icon" width="16" height="16">
+                  <use
+                    class="plus"
+                    href="./src/img/icons.svg#icon-bi_plus"
+                  ></use>
+                  <use
+                    class="minus"
+                    href="./src/img/icons.svg#icon-bi_dash"
+                  ></use>
+                </svg>
+                <div class="co-workers-bio">
+                  <div class="thumb">
+                    <img
+                      src="./src/img/avatars/avatar-1.jpg"
+                      alt="Co-worker`s avatar"
+                      width="42"
+                      height="63"
+                    />
+                  </div>
+                  <p class="co-workers-caption">Andrew Mike</p>
+                </div>
+                <div class="co-workers-controls">
+                  <button class="controls-btn" type="button">
+                    <svg
+                      class="controls-btn-icon success"
+                      width="20"
+                      height="20"
+                    >
+                      <use
+                        href="./src/img/icons.svg#icon-bi_arrow-clockwise"
+                      ></use>
+                    </svg>
+                  </button>
+                  <button class="controls-btn" type="button">
+                    <svg class="controls-btn-icon error" width="20" height="20">
+                      <use href="./src/img/icons.svg#icon-x-close"></use>
+                    </svg>
+                  </button>
+                </div>
+              </summary>
+              <div class="co-workers-info">
+                <h3 class="co-workers-position">Job position</h3>
+                <p>Develop</p>
+                <h3 class="co-workers-accept">Since</h3>
+                <p>2013</p>
+              </div>
+            </details>
+            <details class="co-workers-details">
+              <summary class="co-workers-data">
+                <svg class="co-workers-icon" width="16" height="16">
+                  <use
+                    class="plus"
+                    href="./src/img/icons.svg#icon-bi_plus"
+                  ></use>
+                  <use
+                    class="minus"
+                    href="./src/img/icons.svg#icon-bi_dash"
+                  ></use>
+                </svg>
+                <div class="co-workers-bio">
+                  <div class="thumb">
+                    <img
+                      src="./src/img/avatars/avatar-1.jpg"
+                      alt="Co-worker`s avatar"
+                      width="42"
+                      height="63"
+                    />
+                  </div>
+                  <p class="co-workers-caption">Andrew Mike</p>
+                </div>
+                <div class="co-workers-controls">
+                  <button class="controls-btn" type="button">
+                    <svg
+                      class="controls-btn-icon success"
+                      width="20"
+                      height="20"
+                    >
+                      <use
+                        href="./src/img/icons.svg#icon-bi_arrow-clockwise"
+                      ></use>
+                    </svg>
+                  </button>
+                  <button class="controls-btn" type="button">
+                    <svg class="controls-btn-icon error" width="20" height="20">
+                      <use href="./src/img/icons.svg#icon-x-close"></use>
+                    </svg>
+                  </button>
+                </div>
+              </summary>
+              <div class="co-workers-info">
+                <h3 class="co-workers-position">Job position</h3>
+                <p>Develop</p>
+                <h3 class="co-workers-accept">Since</h3>
+                <p>2013</p>
+              </div>
+            </details>
+            <details class="co-workers-details">
+              <summary class="co-workers-data">
+                <svg class="co-workers-icon" width="16" height="16">
+                  <use
+                    class="plus"
+                    href="./src/img/icons.svg#icon-bi_plus"
+                  ></use>
+                  <use
+                    class="minus"
+                    href="./src/img/icons.svg#icon-bi_dash"
+                  ></use>
+                </svg>
+                <div class="co-workers-bio">
+                  <div class="thumb">
+                    <img
+                      src="./src/img/avatars/avatar-1.jpg"
+                      alt="Co-worker`s avatar"
+                      width="42"
+                      height="63"
+                    />
+                  </div>
+                  <p class="co-workers-caption">Andrew Mike</p>
+                </div>
+                <div class="co-workers-controls">
+                  <button class="controls-btn" type="button">
+                    <svg
+                      class="controls-btn-icon success"
+                      width="20"
+                      height="20"
+                    >
+                      <use
+                        href="./src/img/icons.svg#icon-bi_arrow-clockwise"
+                      ></use>
+                    </svg>
+                  </button>
+                  <button class="controls-btn" type="button">
+                    <svg class="controls-btn-icon error" width="20" height="20">
+                      <use href="./src/img/icons.svg#icon-x-close"></use>
+                    </svg>
+                  </button>
+                </div>
+              </summary>
+              <div class="co-workers-info">
+                <h3 class="co-workers-position">Job position</h3>
+                <p>Develop</p>
+                <h3 class="co-workers-accept">Since</h3>
+                <p>2013</p>
+              </div>
+            </details>
+            <details class="co-workers-details">
+              <summary class="co-workers-data">
+                <svg class="co-workers-icon" width="16" height="16">
+                  <use
+                    class="plus"
+                    href="./src/img/icons.svg#icon-bi_plus"
+                  ></use>
+                  <use
+                    class="minus"
+                    href="./src/img/icons.svg#icon-bi_dash"
+                  ></use>
+                </svg>
+                <div class="co-workers-bio">
+                  <div class="thumb">
+                    <img
+                      src="./src/img/avatars/avatar-1.jpg"
+                      alt="Co-worker`s avatar"
+                      width="42"
+                      height="63"
+                    />
+                  </div>
+                  <p class="co-workers-caption">Andrew Mike</p>
+                </div>
+                <div class="co-workers-controls">
+                  <button class="controls-btn" type="button">
+                    <svg
+                      class="controls-btn-icon success"
+                      width="20"
+                      height="20"
+                    >
+                      <use
+                        href="./src/img/icons.svg#icon-bi_arrow-clockwise"
+                      ></use>
+                    </svg>
+                  </button>
+                  <button class="controls-btn" type="button">
+                    <svg class="controls-btn-icon error" width="20" height="20">
+                      <use href="./src/img/icons.svg#icon-x-close"></use>
+                    </svg>
+                  </button>
+                </div>
+              </summary>
+              <div class="co-workers-info">
+                <h3 class="co-workers-position">Job position</h3>
+                <p>Develop</p>
+                <h3 class="co-workers-accept">Since</h3>
+                <p>2013</p>
+              </div>
+            </details>
+            <details class="co-workers-details">
+              <summary class="co-workers-data">
+                <svg class="co-workers-icon" width="16" height="16">
+                  <use
+                    class="plus"
+                    href="./src/img/icons.svg#icon-bi_plus"
+                  ></use>
+                  <use
+                    class="minus"
+                    href="./src/img/icons.svg#icon-bi_dash"
+                  ></use>
+                </svg>
+                <div class="co-workers-bio">
+                  <div class="thumb">
+                    <img
+                      src="./src/img/avatars/avatar-1.jpg"
+                      alt="Co-worker`s avatar"
+                      width="42"
+                      height="63"
+                    />
+                  </div>
+                  <p class="co-workers-caption">Andrew Mike</p>
+                </div>
+                <div class="co-workers-controls">
+                  <button class="controls-btn" type="button">
+                    <svg
+                      class="controls-btn-icon success"
+                      width="20"
+                      height="20"
+                    >
+                      <use
+                        href="./src/img/icons.svg#icon-bi_arrow-clockwise"
+                      ></use>
+                    </svg>
+                  </button>
+                  <button class="controls-btn" type="button">
+                    <svg class="controls-btn-icon error" width="20" height="20">
+                      <use href="./src/img/icons.svg#icon-x-close"></use>
+                    </svg>
+                  </button>
+                </div>
+              </summary>
+              <div class="co-workers-info">
+                <h3 class="co-workers-position">Job position</h3>
+                <p>Develop</p>
+                <h3 class="co-workers-accept">Since</h3>
+                <p>2013</p>
+              </div>
+            </details>
+
+            <table class="co-workers-table">
+              <caption class="visually-hidden">
+                Co-workers info
+              </caption>
+              <thead>
+                <tr>
+                  <th>#</th>
+                  <th>Name</th>
+                  <th>Job position</th>
+                  <th>Since</th>
+                  <th>Actions</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>
+                    <div class="thumb">
+                      <img
+                        src="./src/img/avatars/avatar-1.jpg"
+                        alt="Co-worker`s avatar"
+                        width="42"
+                        height="63"
+                      />
+                    </div>
+                  </td>
+                  <td>Andrew Mike</td>
+                  <td>Develop</td>
+                  <td>2013</td>
+                  <td>
+                    <div class="co-workers-controls">
+                      <button class="controls-btn" type="button">
+                        <svg
+                          class="controls-btn-icon success"
+                          width="20"
+                          height="20"
+                        >
+                          <use
+                            href="./src/img/icons.svg#icon-bi_arrow-clockwise"
+                          ></use>
+                        </svg>
+                      </button>
+                      <button class="controls-btn" type="button">
+                        <svg
+                          class="controls-btn-icon error"
+                          width="20"
+                          height="20"
+                        >
+                          <use href="./src/img/icons.svg#icon-x-close"></use>
+                        </svg>
+                      </button>
+                    </div>
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    <div class="thumb">
+                      <img
+                        src="./src/img/avatars/avatar-1.jpg"
+                        alt="Co-worker`s avatar"
+                        width="42"
+                        height="63"
+                      />
+                    </div>
+                  </td>
+                  <td>Andrew Mike</td>
+                  <td>Develop</td>
+                  <td>2013</td>
+                  <td>
+                    <div class="co-workers-controls">
+                      <button class="controls-btn" type="button">
+                        <svg
+                          class="controls-btn-icon success"
+                          width="20"
+                          height="20"
+                        >
+                          <use
+                            href="./src/img/icons.svg#icon-bi_arrow-clockwise"
+                          ></use>
+                        </svg>
+                      </button>
+                      <button class="controls-btn" type="button">
+                        <svg
+                          class="controls-btn-icon error"
+                          width="20"
+                          height="20"
+                        >
+                          <use href="./src/img/icons.svg#icon-x-close"></use>
+                        </svg>
+                      </button>
+                    </div>
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    <div class="thumb">
+                      <img
+                        src="./src/img/avatars/avatar-1.jpg"
+                        alt="Co-worker`s avatar"
+                        width="42"
+                        height="63"
+                      />
+                    </div>
+                  </td>
+                  <td>Andrew Mike</td>
+                  <td>Develop</td>
+                  <td>2013</td>
+                  <td>
+                    <div class="co-workers-controls">
+                      <button class="controls-btn" type="button">
+                        <svg
+                          class="controls-btn-icon success"
+                          width="20"
+                          height="20"
+                        >
+                          <use
+                            href="./src/img/icons.svg#icon-bi_arrow-clockwise"
+                          ></use>
+                        </svg>
+                      </button>
+                      <button class="controls-btn" type="button">
+                        <svg
+                          class="controls-btn-icon error"
+                          width="20"
+                          height="20"
+                        >
+                          <use href="./src/img/icons.svg#icon-x-close"></use>
+                        </svg>
+                      </button>
+                    </div>
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    <div class="thumb">
+                      <img
+                        src="./src/img/avatars/avatar-1.jpg"
+                        alt="Co-worker`s avatar"
+                        width="42"
+                        height="63"
+                      />
+                    </div>
+                  </td>
+                  <td>Andrew Mike</td>
+                  <td>Develop</td>
+                  <td>2013</td>
+                  <td>
+                    <div class="co-workers-controls">
+                      <button class="controls-btn" type="button">
+                        <svg
+                          class="controls-btn-icon success"
+                          width="20"
+                          height="20"
+                        >
+                          <use
+                            href="./src/img/icons.svg#icon-bi_arrow-clockwise"
+                          ></use>
+                        </svg>
+                      </button>
+                      <button class="controls-btn" type="button">
+                        <svg
+                          class="controls-btn-icon error"
+                          width="20"
+                          height="20"
+                        >
+                          <use href="./src/img/icons.svg#icon-x-close"></use>
+                        </svg>
+                      </button>
+                    </div>
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    <div class="thumb">
+                      <img
+                        src="./src/img/avatars/avatar-1.jpg"
+                        alt="Co-worker`s avatar"
+                        width="42"
+                        height="63"
+                      />
+                    </div>
+                  </td>
+                  <td>Andrew Mike</td>
+                  <td>Develop</td>
+                  <td>2013</td>
+                  <td>
+                    <div class="co-workers-controls">
+                      <button class="controls-btn" type="button">
+                        <svg
+                          class="controls-btn-icon success"
+                          width="20"
+                          height="20"
+                        >
+                          <use
+                            href="./src/img/icons.svg#icon-bi_arrow-clockwise"
+                          ></use>
+                        </svg>
+                      </button>
+                      <button class="controls-btn" type="button">
+                        <svg
+                          class="controls-btn-icon error"
+                          width="20"
+                          height="20"
+                        >
+                          <use href="./src/img/icons.svg#icon-x-close"></use>
+                        </svg>
+                      </button>
+                    </div>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </section>
+      <section class="tasks">
+        <h2 class="tasks-title"><span>Tasks (5)</span> Today</h2>
+        <ul class="tasks-list">
+          <li class="tasks-item">
+            <label class="tasks-checkbox">
+              <input
+                class="tasks-input visually-hidden"
+                type="checkbox"
+                name="task_status"
+                value="unfinished"
+              />
+              <svg class="tasks-checkbox-icon" width="20" height="20">
+                <use href="./src/img/icons.svg#icon-done"></use>
+              </svg>
+            </label>
+            <div class="tasks-info">
+              <h3 class="tasks-heading">Update the documentation</h3>
+              <p class="task-desc">
+                Dwuamish Head, Seattle,WA <time>8:47 AM</time>
+              </p>
+            </div>
+            <button class="tasks-btn" type="button">
+              <svg class="task-btn-icon" width="20" height="20">
+                <use href="./src/img/icons.svg#icon-bi_gear"></use>
+              </svg>
+            </button>
+          </li>
+          <li class="tasks-item">
+            <label class="tasks-checkbox">
+              <input
+                class="tasks-input visually-hidden"
+                type="checkbox"
+                name="task_status"
+                value="unfinished"
+              />
+              <svg class="tasks-checkbox-icon" width="20" height="20">
+                <use href="./src/img/icons.svg#icon-done"></use>
+              </svg>
+            </label>
+            <div class="tasks-info">
+              <h3 class="tasks-heading">Update the documentation</h3>
+              <p class="task-desc">
+                Dwuamish Head, Seattle,WA <time>8:47 AM</time>
+              </p>
+            </div>
+            <button class="tasks-btn" type="button">
+              <svg class="task-btn-icon" width="20" height="20">
+                <use href="./src/img/icons.svg#icon-bi_gear"></use>
+              </svg>
+            </button>
+          </li>
+          <li class="tasks-item">
+            <label class="tasks-checkbox">
+              <input
+                class="tasks-input visually-hidden"
+                type="checkbox"
+                name="task_status"
+                value="unfinished"
+              />
+              <svg class="tasks-checkbox-icon" width="20" height="20">
+                <use href="./src/img/icons.svg#icon-done"></use>
+              </svg>
+            </label>
+            <div class="tasks-info">
+              <h3 class="tasks-heading">Update the documentation</h3>
+              <p class="task-desc">
+                Dwuamish Head, Seattle,WA <time>8:47 AM</time>
+              </p>
+            </div>
+            <button class="tasks-btn" type="button">
+              <svg class="task-btn-icon" width="20" height="20">
+                <use href="./src/img/icons.svg#icon-bi_gear"></use>
+              </svg>
+            </button>
+          </li>
+          <li class="tasks-item">
+            <label class="tasks-checkbox">
+              <input
+                class="tasks-input visually-hidden"
+                type="checkbox"
+                name="task_status"
+                value="unfinished"
+              />
+              <svg class="tasks-checkbox-icon" width="20" height="20">
+                <use href="./src/img/icons.svg#icon-done"></use>
+              </svg>
+            </label>
+            <div class="tasks-info">
+              <h3 class="tasks-heading">Update the documentation</h3>
+              <p class="task-desc">
+                Dwuamish Head, Seattle,WA <time>8:47 AM</time>
+              </p>
+            </div>
+            <button class="tasks-btn" type="button">
+              <svg class="task-btn-icon" width="20" height="20">
+                <use href="./src/img/icons.svg#icon-bi_gear"></use>
+              </svg>
+            </button>
+          </li>
+          <li class="tasks-item">
+            <label class="tasks-checkbox">
+              <input
+                class="tasks-input visually-hidden"
+                type="checkbox"
+                name="task_status"
+                value="unfinished"
+              />
+              <svg class="tasks-checkbox-icon" width="20" height="20">
+                <use href="./src/img/icons.svg#icon-done"></use>
+              </svg>
+            </label>
+            <div class="tasks-info">
+              <h3 class="tasks-heading">Update the documentation</h3>
+              <p class="task-desc">
+                Dwuamish Head, Seattle,WA <time>8:47 AM</time>
+              </p>
+            </div>
+            <button class="tasks-btn" type="button">
+              <svg class="task-btn-icon" width="20" height="20">
+                <use href="./src/img/icons.svg#icon-bi_gear"></use>
+              </svg>
+            </button>
+          </li>
+        </ul>
+      </section>
+      <section class="reports">
+        <h2 class="reports-title"><span>Task Report</span> | Last 2 Weeks</h2>
+        <ul class="reports-list">
+          <li class="reports-item" data-status="up">
+            <div class="reports-co-worker co-worker">
+              <div class="co-worker-thumb">
+                <img
+                class="ço-worker-avatar"
+                src="./src/img/avatars/thumb.svg"
+                alt="Ibnu Mas’ud"
+                width="32"
+                height="32" />
+              </div>
+              <h3 class="co-worker-caption">Ibnu Mas’ud</h3>
+            </div>
+            <progress class="reports-bar" id="report_ibnu" max="100" value="89">
+              <div class="progress-bar">
+                <span style="width: 89%">Progress: 89%</span>
+              </div>
+            </progress>
+            <svg class="reports-status" width="20" height="20">
+              <use class="up" href="./src/img/icons.svg#icon-up"></use>
+              <use class="dash" href="./src/img/icons.svg#icon-bi_dash"></use>
+              <use class="down" href="./src/img/icons.svg#icon-down"></use>
+            </svg>
+          </li>
+          <li class="reports-item" data-status="up">
+            <div class="reports-co-worker co-worker">
+              <div class="co-worker-thumb">
+                <img
+                class="ço-worker-avatar"
+                src="./src/img/avatars/thumb.svg"
+                alt="Ibnu Mas’ud"
+                width="32"
+                height="32" />
+              </div>
+              <h3 class="co-worker-caption">Ibnu Mas’ud</h3>
+            </div>
+            <progress class="reports-bar" id="report_ibnu" max="100" value="89">
+              <div class="progress-bar">
+                <span style="width: 89%">Progress: 89%</span>
+              </div>
+            </progress>
+            <svg class="reports-status" width="20" height="20">
+              <use class="up" href="./src/img/icons.svg#icon-up"></use>
+              <use class="dash" href="./src/img/icons.svg#icon-bi_dash"></use>
+              <use class="down" href="./src/img/icons.svg#icon-down"></use>
+            </svg>
+          </li>
+          <li class="reports-item" data-status="up">
+            <div class="reports-co-worker co-worker">
+              <div class="co-worker-thumb">
+                <img
+                class="ço-worker-avatar"
+                src="./src/img/avatars/thumb.svg"
+                alt="Ibnu Mas’ud"
+                width="32"
+                height="32" />
+              </div>
+              <h3 class="co-worker-caption">Ibnu Mas’ud</h3>
+            </div>
+            <progress class="reports-bar" id="report_ibnu" max="100" value="89">
+              <div class="progress-bar">
+                <span style="width: 89%">Progress: 89%</span>
+              </div>
+            </progress>
+            <svg class="reports-status" width="20" height="20">
+              <use class="up" href="./src/img/icons.svg#icon-up"></use>
+              <use class="dash" href="./src/img/icons.svg#icon-bi_dash"></use>
+              <use class="down" href="./src/img/icons.svg#icon-down"></use>
+            </svg>
+          </li>
+          <li class="reports-item" data-status="up">
+            <div class="reports-co-worker co-worker">
+              <div class="co-worker-thumb">
+                <img
+                class="ço-worker-avatar"
+                src="./src/img/avatars/thumb.svg"
+                alt="Ibnu Mas’ud"
+                width="32"
+                height="32" />
+              </div>
+              <h3 class="co-worker-caption">Ibnu Mas’ud</h3>
+            </div>
+            <progress class="reports-bar" id="report_ibnu" max="100" value="89">
+              <div class="progress-bar">
+                <span style="width: 89%">Progress: 89%</span>
+              </div>
+            </progress>
+            <svg class="reports-status" width="20" height="20">
+              <use class="up" href="./src/img/icons.svg#icon-up"></use>
+              <use class="dash" href="./src/img/icons.svg#icon-bi_dash"></use>
+              <use class="down" href="./src/img/icons.svg#icon-down"></use>
+            </svg>
+          </li>
+          <li class="reports-item" data-status="up">
+            <div class="reports-co-worker co-worker">
+              <div class="co-worker-thumb">
+                <img
+                class="ço-worker-avatar"
+                src="./src/img/avatars/thumb.svg"
+                alt="Ibnu Mas’ud"
+                width="32"
+                height="32" />
+              </div>
+              <h3 class="co-worker-caption">Ibnu Mas’ud</h3>
+            </div>
+            <progress class="reports-bar" id="report_ibnu" max="100" value="89">
+              <div class="progress-bar">
+                <span style="width: 89%">Progress: 89%</span>
+              </div>
+            </progress>
+            <svg class="reports-status" width="20" height="20">
+              <use class="up" href="./src/img/icons.svg#icon-up"></use>
+              <use class="dash" href="./src/img/icons.svg#icon-bi_dash"></use>
+              <use class="down" href="./src/img/icons.svg#icon-down"></use>
+            </svg>
+          </li>
+        </ul>
+      </section>
     </main>
     <script type="module" src="./src/js/main.js"></script>
   </body>

@@ -1,0 +1,17 @@
+@use "../utilities/placeholders";
+@use "../utilities/variables" as var;
+@use "../utilities/functions" as fn;
+@use "../utilities/mixins" as mx;
+
+.notification{
+  flex-shrink: 0;
+  
+  display: block;
+  min-width: 28px;
+  height: 20px;
+  padding: 0 10px;
+
+  color: fn.get-color('light-primary');
+  border-radius: 12px;
+  background-color: fn.get-color('danger');
+}

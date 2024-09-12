@@ -1,12 +1,35 @@
-@use 'btn/btn' as btn with(
-    $btn-layer-spacing: 4px
-);
+@use "../utilities/placeholders";
+@use "../utilities/variables" as var;
+@use "../utilities/functions" as fn;
+@use "../utilities/mixins" as mx;
 
-.welcome{
-    grid-area: welcome;
-};
+@use "btn/btn" as btn with($btn-layer-spacing: 4px);
 
-.welcome-btn{
-    display: inline-block;
-    margin: 0 auto;
-};
+.welcome {
+  grid-area: welcome;
+
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: flex-end;
+  row-gap: 16px;
+}
+
+.page-title {
+  &-accent {
+    @extend %section-title;
+
+    display: block;
+    margin-bottom: 8px;
+
+    color: fn.get-color("light-primary");
+  }
+}
+
+.welcome-btn {
+  @include mx.mq("md", "max") {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+  }
+}

@@ -115,12 +115,14 @@
           class="search-input"
           type="search"
           name="user_search"
-          placeholder="Search..."
+          placeholder="Search Something..."
         />
       </label>
-      <svg class="search-icon" width="20" height="20">
-        <use href="./src/img/icons.svg#icon-bell"></use>
-      </svg>
+      <button class="notification-btn" type="button" data-notify="true" aria-label="Bell button">
+        <svg class="notification-btn-icon" width="20" height="20">
+          <use href="./src/img/icons.svg#icon-bell"></use>
+        </svg>
+      </button>
     </header>
     <main class="main">
       <section class="welcome">
@@ -176,7 +178,7 @@
                     </svg>
                   </button>
                   <button class="controls-btn" type="button">
-                    <svg class="controls-btn-icon error" width="20" height="20">
+                    <svg class="controls-btn-icon error" width="15" height="15">
                       <use href="./src/img/icons.svg#icon-x-close"></use>
                     </svg>
                   </button>
@@ -225,7 +227,7 @@
                     </svg>
                   </button>
                   <button class="controls-btn" type="button">
-                    <svg class="controls-btn-icon error" width="20" height="20">
+                    <svg class="controls-btn-icon error" width="15" height="15">
                       <use href="./src/img/icons.svg#icon-x-close"></use>
                     </svg>
                   </button>
@@ -274,7 +276,7 @@
                     </svg>
                   </button>
                   <button class="controls-btn" type="button">
-                    <svg class="controls-btn-icon error" width="20" height="20">
+                    <svg class="controls-btn-icon error" width="15" height="15">
                       <use href="./src/img/icons.svg#icon-x-close"></use>
                     </svg>
                   </button>
@@ -323,7 +325,7 @@
                     </svg>
                   </button>
                   <button class="controls-btn" type="button">
-                    <svg class="controls-btn-icon error" width="20" height="20">
+                    <svg class="controls-btn-icon error" width="15" height="15">
                       <use href="./src/img/icons.svg#icon-x-close"></use>
                     </svg>
                   </button>
@@ -372,7 +374,7 @@
                     </svg>
                   </button>
                   <button class="controls-btn" type="button">
-                    <svg class="controls-btn-icon error" width="20" height="20">
+                    <svg class="controls-btn-icon error" width="15" height="15">
                       <use href="./src/img/icons.svg#icon-x-close"></use>
                     </svg>
                   </button>
@@ -610,7 +612,7 @@
                 <div class="person-thumb">
                   <img class="person-avatar" src="./src/img/avatars/avatar-1.jpg" alt="George Fields" width='40' height="40"/>
                 </div>
-                <p>George Fields</p>
+                <p class="person-caption">George Fields</p>
               </div>
             </div>
           </li>
@@ -624,7 +626,7 @@
                 <div class="person-thumb">
                   <img class="person-avatar" src="./src/img/avatars/avatar-1.jpg" alt="George Fields" width='40' height="40"/>
                 </div>
-                <p>George Fields</p>
+                <p class="person-caption">George Fields</p>
               </div>
             </div>
           </li>

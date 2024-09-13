@@ -39,12 +39,15 @@
     }
 
     span{
-        @extend %accent-text
+        @extend %accent-text;
+
+        font-size: 16px;
+        color: fn.get-color('light');
     }
 }
 
 .co-workers-container{
-    @include mx.scroll-bar;
+    @include mx.scroll-bar();
 
     max-height: 296px;
 

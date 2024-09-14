@@ -66,7 +66,7 @@
     border-color: fn.get-color('light-tertiary');
     border-radius: 4px;
 
-    .task-input:checked + & {
+    .tasks-input:checked + & {
         fill: fn.get-color('light-primary');
         background-color: fn.get-color('accent-primary');
         border-color: fn.get-color('transparent');
@@ -95,3 +95,21 @@
     color: fn.get-color('light-secondary');
 }
 
+.tasks-btn{
+    @include mx.ease('fast', outline);
+
+    width: 20px;
+    height: 20px;
+    color: fn.get-color('light-tertiary');
+    border-radius: 50%;
+
+    &:focus-visible{
+        outline: 2px solid;
+        outline-color: rgba(fn.get-color('light-tertiary'), 0.6);
+        outline-offset: 3px;
+    }
+
+    &-icon{
+        fill: fn.get-color('current')
+    }
+}

@@ -860,7 +860,7 @@ summary {
   border-color: #92929d;
   border-radius: 4px;
 }
-.task-input:checked + .tasks-checkbox-icon {
+.tasks-input:checked + .tasks-checkbox-icon {
   fill: #fafafb;
   background-color: #f07f2e;
   border-color: transparent;
@@ -884,6 +884,27 @@ summary {
 
 .tasks-desc {
   color: #b5b5be;
+}
+
+.tasks-btn {
+  -webkit-transition: 300ms ease;
+  -moz-transition: 300ms ease;
+  transition: 300ms ease;
+  -webkit-transition-property: outline;
+  -moz-transition-property: outline;
+  transition-property: outline;
+  width: 20px;
+  height: 20px;
+  color: #92929d;
+  border-radius: 50%;
+}
+.tasks-btn:focus-visible {
+  outline: 2px solid;
+  outline-color: rgba(146, 146, 157, 0.6);
+  outline-offset: 3px;
+}
+.tasks-btn-icon {
+  fill: currentColor;
 }
 
 .reports {

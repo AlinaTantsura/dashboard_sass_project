@@ -17,3 +17,5 @@ This project was created during studying course "SASS preprocessors". Dashboard 
 2. HTML5
 3. JavaScript
 4. Vite
+5. Visual Studio Code
+6. Figma

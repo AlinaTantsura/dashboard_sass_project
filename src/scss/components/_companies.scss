@@ -1,0 +1,55 @@
+@use "../utilities/placeholders";
+@use "../utilities/variables" as var;
+@use "../utilities/functions" as fn;
+@use "../utilities/mixins" as mx;
+
+.companies-main{
+    display: block;
+}
+
+.companies-list{
+    margin-top: 40px;
+
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 20px;
+
+    @include mx.mq('md'){
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    @include mx.mq('lg'){
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+}
+
+.companies-item{
+    min-width: 343px;
+
+    padding: 24px;
+    border-radius: 24px;
+
+    background-color: fn.get-color('dark-tertiary');
+}
+
+.company-title{
+    @extend %accent-text;
+
+    min-width: 311px;
+    margin-bottom: 4px;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    color: fn.get-color('light');
+}
+
+.company-btn{
+    @extend %details;
+
+    margin-top: 32px;
+
+    color: fn.get-color('accent-primary');
+}
